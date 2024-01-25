@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="project_project_form_view_inherit">
+        <field name="name">project.project.view.inherit</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='settings']" position="after">
+                <page string="Planning">
+                    <sheet>
+                        <group>
+                            <field name="hours_total" string="Hours Project"/>
+                            <field name="hours_total_planned" string="Scheduled Hours"/>
+                            <separator/>
+                            <field name="planning_line_ids" string="Planning Hours">
+                                <tree editable="top">
+                                    <field name="project_id"/>
+                                    <field name="employee_id"/>
+                                    <field name="hours_invested"  />
+                                    <field name="hours_assigned" invisible="1"  force_save = "1"/>
+                                    <field name="hours_assigned_string" decoration-danger="hours_assigned > hours_invested" />
+                                    <field name="hour_pending" invisible="1" force_save = "1" />
+                                    <field name="hours_pending_string"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

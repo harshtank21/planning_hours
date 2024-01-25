@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="planning_hours_in_projects"
+              name="Planning Hours"
+    />
+
+    <menuitem id="Project_line_menu"
+              name="Project Line"
+              parent="planning_hours_in_projects"
+              action="project_planning_line_action"
+              sequence="15"/>
+
+</odoo>

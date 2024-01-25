@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+planning_hours.access_project_project,access_project_project,planning_hours.model_project_project,base.group_user,1,1,1,1
+planning_hours.access_project_planning_line,access_project_planning_line,planning_hours.model_project_planning_line,base.group_user,1,1,1,1
